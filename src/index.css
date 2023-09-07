@@ -1,13 +1,115 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: black;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.modal-outer {
+  position: fixed;
+  inset: 0px;
+  background-color: black;
+  opacity: 0.7;
+  overflow-y: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+.modal-main {
+  position: fixed;
+  background-color: white;
+  z-index: 800;
+  border: 1px solid black;
+  top: 10%;
+  left: 30%;
+  right: 50%;
+  width: 620px;
+  height: 620px;
+  border-radius: 16px 16px 16px 16px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+.selectClass {
+  border-radius: 8px;
+  border: 1px solid var(--border-default, rgba(25, 27, 25, 0.24));
+  background: var(--fill-white-solid, #fff);
+}
+
+.dropDown {
+  position: fixed;
+  z-index: 1000;
+  border-radius: 8px;
+  background: var(--background-default, #fff);
+  opacity: 1;
+  padding: 8px;
+  width: 320px;
+  max-height: 320px;
+  overflow-y: scroll;
+  /* Elevation 3 */
+  box-shadow: 0px 2px 20px 0px rgba(25, 25, 27, 0.1),
+    0px 0px 2px 0px rgba(25, 25, 27, 0.16);
+}
+
+.timerDropdown {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  padding: 8px 4px 8px 8px;
+  align-items: flex-start;
+  gap: 4px;
+  top: 50%;
+  left: 16%;
+}
+
+.endTime {
+  left: 50%;
+}
+
+.eventDropdown {
+  display: flex;
+  width: 320px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  top: 35%;
+  left: 60%;
+}
+
+.dropDownListItems {
+  padding: 8px;
+  width: auto;
+  display: flex;
+  gap: 4px;
+}
+.dropDownListItems:hover {
+  background-color: #e1eae2;
+}
+.cancelButton {
+  border-radius: 8px;
+  width: 79px;
+  color: #094f0c;
+  padding: 12px 6px 12px 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid var(--border-button-outline, rgba(9, 79, 12, 0.5));
+  background: var(--fill-white-solid, #fff);
+}
+.addButton {
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  width: 79px;
+  padding: 12px 6px 12px 6px;
+  cursor: pointer;
+  color: #c2f291;
+  background: #094f0c;
+  border: none;
 }
